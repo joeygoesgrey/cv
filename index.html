@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Joseph Edomobi, Backend Engineer, CV</title>
+  <link rel="stylesheet" href="cv.css">
+</head>
+<body>
+
+  <div class="sheet">
+
+    <header class="masthead">
+      <img class="portrait" src="https://cdn.meldev.com.ng/users/2ee17b29-0e9c-4dde-8685-4ea06c8dec20/pub/assets/portrait.jpeg" alt="Portrait of Joseph Edomobi">
+      <div class="identity">
+        <h1>Joseph Edomobi</h1>
+        <p class="role">Backend Engineer</p>
+        <p class="contact">
+          <span>Abuja, Nigeria</span>
+          <span><a href="mailto:godfreydjoseph@gmail.com">godfreydjoseph@gmail.com</a></span>
+          <span>+234 915 582 2872</span>
+          <span><a href="https://github.com/joeygoesgrey">github.com/joeygoesgrey</a></span>
+          <span><a href="https://www.linkedin.com/in/joseph-edomobi-joeygoesgrey">linkedin.com/in/joseph-edomobi-joeygoesgrey</a></span>
+        </p>
+      </div>
+    </header>
+
+    <div class="columns">
+
+      <aside class="sidebar">
+        <h2>Summary</h2>
+        <p>Backend engineer with four years building Python and PHP systems: file storage and CDN, e-commerce APIs, and multi-tenant tools. I design the infrastructure, review the code, and keep cloud costs small.</p>
+
+        <h2>Skills</h2>
+        <div class="skills">
+          <p><strong>Languages</strong> Python (main), PHP, JavaScript, TypeScript (working knowledge), SQL, Bash</p>
+          <p><strong>Backend</strong> FastAPI, Django, Hono, REST APIs, PostgreSQL, Redis</p>
+          <p><strong>Infrastructure</strong> Docker, Linux, Nginx, Cloudflare Workers, R2, D1, GitHub Actions</p>
+        </div>
+
+        <h2>Languages</h2>
+        <p>English (fluent)<br>Turkish (basic)</p>
+      </aside>
+
+      <main class="main">
+        <h2>Experience</h2>
+
+        <div class="job">
+          <div class="job-header">
+            <span class="job-title">Meldev, Lead Engineer</span>
+            <span class="job-dates">Jul 2022 to Present</span>
+          </div>
+          <div class="job-meta">File storage and CDN for developers, with a command line client</div>
+          <ul>
+            <li>Moved the platform from one VPS running Docker to Cloudflare Workers, D1 and R2 with background queues, so quiet months no longer cost a fixed server fee.</li>
+            <li>Built the file pipeline: resumable uploads, idempotency keys that stop duplicate or concurrent uploads, private files with expiring links, and file versions with the newest at the head.</li>
+            <li>Built the Python CLI with clean standard output and error, retries with backoff and a circuit breaker, plus a GitHub Actions build that tests it on Linux, macOS and Windows.</li>
+            <li>Added API keys with scopes and per-user storage quotas, with bandwidth and daily usage metrics.</li>
+            <li>Led code review, wrote end-to-end tests, and set module boundaries so new engineers and agents can work in the code base without breaking each other.</li>
+          </ul>
+        </div>
+
+        <div class="job">
+          <div class="job-header">
+            <span class="job-title">Twelve Eleven Atelier, Backend Engineer (freelance)</span>
+            <span class="job-dates">Mar 2026 to Present</span>
+          </div>
+          <div class="job-meta">Live menswear e-commerce site</div>
+          <ul>
+            <li>Built the catalog, cart and order backend. Payments were handled by another engineer on the team.</li>
+            <li>Added a wishlist for guests and signed-in users, with the same product card used in the shop, wishlist and cart pages.</li>
+          </ul>
+        </div>
+
+        <div class="job">
+          <div class="job-header">
+            <span class="job-title">5th Element Creative Media, Tech Lead</span>
+            <span class="job-dates">May 2024 to Jan 2025</span>
+          </div>
+          <ul>
+            <li>Built custom WordPress themes for property and small business clients, with analytics set up from day one.</li>
+            <li>Took part in technical decisions for client projects and managed the delivery of each site.</li>
+            <li>Moved YannaApartments.com from page two to number two on Google page one for a competitive local keyword.</li>
+            <li>Ran the company Microsoft 365 accounts, staff permissions and offboarding.</li>
+          </ul>
+        </div>
+
+        <div class="job">
+          <div class="job-header">
+            <span class="job-title">27th Development, Full-Stack Developer</span>
+            <span class="job-dates">Jan 2023 to Mar 2024</span>
+          </div>
+          <ul>
+            <li>Built REST APIs with Django REST Framework and Vue frontends.</li>
+            <li>Set up Docker Compose environments and blue-green CI/CD so releases were repeatable.</li>
+            <li>Built an API layer that filtered scraping bots and added role based access for staff.</li>
+            <li>Joined system design sessions and covered for a senior colleague when needed.</li>
+          </ul>
+        </div>
+
+        <div class="job">
+          <div class="job-header">
+            <span class="job-title">Cenntre, Backend Engineer</span>
+            <span class="job-dates">Mar 2022 to Dec 2022</span>
+          </div>
+          <ul>
+            <li>Moved services across GCP, Azure and DigitalOcean and used Cloudflare Workers, lowering the fixed cloud bill.</li>
+            <li>Tuned Nginx and Fail2ban and set Docker CPU and memory limits on small VPS machines.</li>
+            <li>Forwarded server logs with personal data removed, which made production bugs faster to find.</li>
+          </ul>
+        </div>
+
+        <h2>Projects</h2>
+
+        <div class="job">
+          <div class="job-header">
+            <span class="job-title">LinkedIn Automation Framework (open source), Lead Developer</span>
+            <span class="job-dates">2023 to 2025</span>
+          </div>
+          <div class="job-meta">Python tool, 28 stars on GitHub</div>
+          <ul>
+            <li>Built a command line tool that drives a real Chromium browser to post, comment and schedule on LinkedIn as a person would.</li>
+            <li>Built a click fallback chain: native click, then script injection, then keyboard action, so the tool keeps working when the page layout changes.</li>
+            <li>Added a de-duplication store so the tool never touches the same post twice, and paced actions to stay within normal use.</li>
+          </ul>
+        </div>
+
+        <div class="job">
+          <div class="job-header">
+            <span class="job-title">Paperless, personal project</span>
+            <span class="job-dates">2025 to 2026</span>
+          </div>
+          <ul>
+            <li>Built a web tool that lets Nigerian schools photograph paper records and find them later.</li>
+            <li>Enforced row-level security so one school can never read another school's records, even if the application is compromised.</li>
+            <li>Compressed uploads to small black and white files to cut storage use, and shortened account setup to a few steps.</li>
+          </ul>
+        </div>
+
+        <div class="job">
+          <div class="job-header">
+            <span class="job-title">A4 Print System, Lead Developer</span>
+          </div>
+          <ul>
+            <li>Built an upload system where customers send files from their phone and print shops receive them without saving files on shop computers.</li>
+            <li>Scanned every upload with a malware API before it reached the shop, and stored files on Cloudflare R2.</li>
+          </ul>
+        </div>
+
+        <h2>Education</h2>
+        <p><strong>Cyprus International University</strong>, Northern Cyprus. Information Technology, 2020 to 2022.</p>
+      </main>
+
+    </div>
+  </div>
+
+</body>
+</html>

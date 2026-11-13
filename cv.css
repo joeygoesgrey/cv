@@ -1,0 +1,271 @@
+/*
+WHY
+  One stylesheet for two outputs: a two column page on screen and a plain
+  one column A4 sheet when printed, so the PDF is never edited by hand.
+*/
+
+:root {
+  --ink: #111827;
+  --muted: #4b5563;
+  --rule: #d1d5db;
+  --paper: #ffffff;
+  --backdrop: #e5e7eb;
+  --dark: #111827;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  color: var(--ink);
+  background: var(--backdrop);
+  font-family: "DejaVu Sans", Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.sheet {
+  max-width: 900px;
+  margin: 28px auto;
+  background: var(--paper);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.18);
+}
+
+.masthead {
+  display: flex;
+  align-items: center;
+  gap: 26px;
+  padding: 26px 34px;
+  background: var(--dark);
+  color: #f9fafb;
+}
+
+.portrait {
+  width: 104px;
+  height: 104px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid rgba(255, 255, 255, 0.25);
+}
+
+h1 {
+  margin: 0;
+  font-size: 32px;
+  letter-spacing: 1.5px;
+}
+
+.role {
+  margin: 4px 0 0;
+  font-size: 13px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #d1d5db;
+}
+
+.contact {
+  margin: 10px 0 0;
+  font-size: 12px;
+  color: #d1d5db;
+  line-height: 1.7;
+}
+
+.contact span {
+  margin-right: 12px;
+  white-space: nowrap;
+}
+
+.columns {
+  display: grid;
+  grid-template-columns: 32% 68%;
+}
+
+.sidebar {
+  padding: 26px 24px 26px 34px;
+  border-right: 1px solid var(--rule);
+}
+
+.main {
+  padding: 26px 34px 30px 30px;
+}
+
+h2 {
+  margin: 20px 0 8px;
+  font-size: 11px;
+  letter-spacing: 1.6px;
+  text-transform: uppercase;
+  color: var(--ink);
+}
+
+.sidebar h2:first-child,
+.main h2:first-child {
+  margin-top: 0;
+}
+
+p {
+  margin: 0;
+}
+
+.skills p {
+  margin: 0 0 8px;
+}
+
+.skills strong {
+  display: block;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.job {
+  margin-bottom: 14px;
+}
+
+.job-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+}
+
+.job-title {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.job-dates {
+  font-size: 12px;
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+.job-meta {
+  font-size: 12px;
+  color: var(--muted);
+  margin: 1px 0 4px;
+}
+
+ul {
+  margin: 4px 0 0;
+  padding-left: 17px;
+}
+
+li {
+  margin: 0 0 4px;
+}
+
+.page-break {
+  break-before: page;
+}
+
+@media screen and (max-width: 720px) {
+  .sheet {
+    margin: 0;
+    box-shadow: none;
+  }
+
+  .columns {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    border-right: 0;
+    border-bottom: 1px solid var(--rule);
+    padding: 22px 24px;
+  }
+
+  .main {
+    padding: 22px 24px;
+  }
+
+  .masthead {
+    flex-direction: column;
+    text-align: center;
+    padding: 24px 20px;
+  }
+
+  .contact span {
+    display: block;
+    margin: 0;
+  }
+}
+
+@media print {
+  @page {
+    size: A4;
+    margin: 16mm 16mm 15mm;
+  }
+
+  body {
+    background: #ffffff;
+    font-size: 9.8pt;
+    line-height: 1.45;
+  }
+
+  .sheet {
+    max-width: none;
+    margin: 0;
+    box-shadow: none;
+  }
+
+  .masthead {
+    padding: 10mm 0 6mm;
+    background: #111827;
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+  }
+
+  .portrait {
+    display: none;
+  }
+
+  .columns {
+    display: block;
+  }
+
+  .sidebar,
+  .main {
+    padding: 0;
+    border: 0;
+  }
+
+  .main {
+    margin-top: 2mm;
+  }
+
+  h2 {
+    margin: 5mm 0 2mm;
+    break-after: avoid;
+  }
+
+  .job {
+    margin-bottom: 3.4mm;
+    break-inside: avoid;
+  }
+
+  .job-dates {
+    font-size: 9pt;
+  }
+
+  .job-meta {
+    font-size: 9pt;
+  }
+
+  .job-title {
+    font-size: 10.4pt;
+  }
+
+  li {
+    margin-bottom: 1mm;
+  }
+}
