@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>CV link preview card</title>
+  <style>
+    /*
+    WHY
+      This file draws the 1200 by 630 image that LinkedIn, X and WhatsApp
+      show when the CV link is shared. It is not linked from the site.
+    */
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      width: 1200px;
+      height: 630px;
+      overflow: hidden;
+      background: #111827;
+    }
+
+    .card {
+      display: flex;
+      align-items: center;
+      gap: 64px;
+      width: 1200px;
+      height: 630px;
+      padding: 0 96px;
+      color: #f9fafb;
+      font-family: "DejaVu Sans", Arial, Helvetica, sans-serif;
+    }
+
+    .portrait {
+      width: 250px;
+      height: 250px;
+      border-radius: 50%;
+      object-fit: cover;
+      flex: none;
+    }
+
+    .name {
+      margin: 0;
+      font-size: 62px;
+      letter-spacing: 2px;
+      line-height: 1.1;
+    }
+
+    .rule {
+      width: 84px;
+      height: 2px;
+      margin: 22px 0;
+      background: #6b7280;
+    }
+
+    .role {
+      margin: 0;
+      font-size: 22px;
+      letter-spacing: 5px;
+      text-transform: uppercase;
+      color: #9ca3af;
+    }
+
+    .place {
+      margin: 12px 0 0;
+      font-size: 22px;
+      color: #d1d5db;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <img class="portrait" src="assets/portrait.jpeg" alt="">
+    <div>
+      <p class="name">Joseph Edomobi</p>
+      <div class="rule"></div>
+      <p class="role">Backend Engineer</p>
+      <p class="place">Abuja, Nigeria</p>
+    </div>
+  </div>
+</body>
+</html>
